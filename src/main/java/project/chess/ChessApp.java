@@ -18,13 +18,18 @@ public class ChessApp extends Application {
         ImageView chessImage = new ImageView("https://www.karacterbox.com/media/catalog/product/cache/9d08971813a040f8f96067a40f75c615/2/9/29eab83d85d79e0d966a6cec840fdc1a_f_6034010_1.jpg");
         chessImage.setFitHeight(300.0);
         chessImage.setPreserveRatio(true);
+        chessButton.setOnAction((e) -> chessAction(e,primaryStage));
         Layout.getChildren().addAll(chessImage,chessButton);
         Layout.setAlignment(Pos.CENTER);
         Scene mainScene = new Scene(Layout);
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("Chess");
+        primaryStage.sizeToScene();
         primaryStage.show();
     }
-    public void chessAction(ActionEvent event) {
+    public void chessAction(ActionEvent event,Stage stage) {
+        ChessBoard chessGame = new ChessBoard();
+        Scene chessScene = new Scene(chessGame);
+        stage.setScene(chessScene);
     }
 }
