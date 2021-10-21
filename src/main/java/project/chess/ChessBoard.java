@@ -1,6 +1,11 @@
 package project.chess;
 
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
 import javafx.geometry.Pos;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.TilePane;
@@ -31,7 +36,7 @@ public class ChessBoard extends VBox {
                 } else {
                     s.setFill(Paint.valueOf("Grey"));
                 }
-             /*   if (i == 0 || i == 1) {
+                if (i == 0 || i == 1) {
                     imageSizeChange(i,j);
                     tiles[i][j].getChildren().add(BlackchessObjects[i][j]);
                     tiles[i][j].setAlignment(Pos.CENTER);
@@ -43,7 +48,7 @@ public class ChessBoard extends VBox {
                     }
                     tiles[i][j].getChildren().add(whitechessObjects[index][j]);
                     tiles[i][j].setAlignment(Pos.CENTER);
-                }*/
+                }
                 gameBoard.add(tiles[i][j], j, i);
                 gameBoard.add(s, j, i);
             }
@@ -55,9 +60,9 @@ public class ChessBoard extends VBox {
         return gameBoard;
     }
     public boolean alternator(int row, int col) {
-        if (row%2 == 0 && col%2 == 0) {
+        if (row % 2 == 0 && col % 2 == 0) {
             return true;
-        } else if (row%2 != 0 && col%2 != 0) {
+        } else if (row % 2 != 0 && col % 2 != 0) {
             return true;
         } else {
             return false;
@@ -86,7 +91,7 @@ public class ChessBoard extends VBox {
                     }
 
         };
-        String wPawn = "https://www.vhv.rs/dpng/d/139-1392565_white-pawn-chess-piece-png-download-transparent-background.png";
+        Image wPawn = new Image("file:///C:/Users/Het20/Game-chess/pawn.png");
         String wRook = "https://static.thenounproject.com/png/3435242-200.png";
         String wKnight = "https://www.clipartmax.com/png/middle/257-2577557_horse-chess-piece-knight-comments-knight.png";
         String wBishop = "https://e7.pngegg.com/pngimages/113/13/png-clipart-chess-piece-pawn-bishop-chess-white-hand.png";

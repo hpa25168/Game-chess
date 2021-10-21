@@ -15,7 +15,9 @@ public class ChessApp extends Application {
     public void start(Stage primaryStage) {
         Layout = new VBox();
         Button chessButton = new Button("Chess");
-        ImageView chessImage = new ImageView("https://www.karacterbox.com/media/catalog/product/cache/9d08971813a040f8f96067a40f75c615/2/9/29eab83d85d79e0d966a6cec840fdc1a_f_6034010_1.jpg");
+        chessButton.setMaxHeight(100);
+
+        ImageView chessImage = new ImageView("https://images.chesscomfiles.com/uploads/v1/article/27319.746c2259.668x375o.c6cf8543e2d5@2x.png");
         chessImage.setFitHeight(300.0);
         chessImage.setPreserveRatio(true);
         chessButton.setOnAction((e) -> chessAction(e,primaryStage));
@@ -31,5 +33,7 @@ public class ChessApp extends Application {
         ChessBoard chessGame = new ChessBoard();
         Scene chessScene = new Scene(chessGame);
         stage.setScene(chessScene);
+        stage.sizeToScene();
+        stage.show();
     }
 }
