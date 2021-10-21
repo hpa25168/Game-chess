@@ -31,11 +31,11 @@ public class ChessBoard extends VBox {
             for (int j = 0; j < tiles[i].length; j++) {
                 Rectangle s = new Rectangle(75, 75);
                 tiles[i][j] = new TilePane();
-                if (alternator(i, j)) {
-                    s.setFill(Paint.valueOf("White"));
-                } else {
-                    s.setFill(Paint.valueOf("Grey"));
-                }
+                // if (alternator(i, j)) {
+                //     s.setFill(Paint.valueOf("White"));
+                // } else {
+                //     s.setFill(Paint.valueOf("Grey"));
+                // }
                 if (i == 0 || i == 1) {
                     imageSizeChange(i,j);
                     tiles[i][j].getChildren().add(BlackchessObjects[i][j]);
@@ -50,7 +50,7 @@ public class ChessBoard extends VBox {
                     tiles[i][j].setAlignment(Pos.CENTER);
                 }
                 gameBoard.add(tiles[i][j], j, i);
-                gameBoard.add(s, j, i);
+               // gameBoard.add(s, j, i);
             }
 
         }
@@ -76,12 +76,12 @@ public class ChessBoard extends VBox {
         }
     }
     public void chessImages() {
-        String pawn = "https://toppng.com/uploads/preview/awn-chess-piece-pawn-chess-piece-transparent-11563391176oxnhiiocwr.png";
-        String rook = "https://p7.hiclipart.com/preview/541/207/793/chess-piece-queen-pawn-checkmate-chess.jpg";
-        String knight = "https://cdn.imgbin.com/8/17/8/imgbin-chess-piece-knight-bishop-rook-international-chess-kAZh637cjfjimB17UwwEbLrNj.jpg";
-        String bishop = "https://www.clipartmax.com/png/middle/242-2426241_free-png-bishop-black-chess-piece-png-images-transparent-chess.png";
-        String queen = "https://www.clipartmax.com/png/middle/242-2426241_free-png-bishop-black-chess-piece-png-images-transparent-chess.png";
-        String king = "https://toppng.com/uploads/preview/king-black-chess-piece-115328561199vb1bvbiin.png";
+        String pawn = "https://github.com/hpa25168/Game-chess/blob/work_Board/bPawn.png?raw=true";
+        String rook = "https://github.com/hpa25168/Game-chess/blob/work_Board/BRook.png?raw=true";
+        String knight = "https://github.com/hpa25168/Game-chess/blob/work_Board/bKnigth.png?raw=true";
+        String bishop = "https://github.com/hpa25168/Game-chess/blob/work_Board/Bbishop.png?raw=true";
+        String queen = "https://github.com/hpa25168/Game-chess/blob/work_Board/BQueen.png?raw=true";
+        String king = "https://github.com/hpa25168/Game-chess/blob/work_Board/BKing.png?raw=true";
         BlackchessObjects = new ImageView[][] {
                     {
                             new ImageView(rook),new ImageView(knight),new ImageView(bishop),new ImageView(queen),new ImageView(king),new ImageView(bishop),new ImageView(knight),new ImageView(rook)
@@ -91,12 +91,12 @@ public class ChessBoard extends VBox {
                     }
 
         };
-        Image wPawn = new Image("file:///C:/Users/Het20/Game-chess/pawn.png");
-        String wRook = "https://static.thenounproject.com/png/3435242-200.png";
-        String wKnight = "https://www.clipartmax.com/png/middle/257-2577557_horse-chess-piece-knight-comments-knight.png";
-        String wBishop = "https://e7.pngegg.com/pngimages/113/13/png-clipart-chess-piece-pawn-bishop-chess-white-hand.png";
-        String wQueen = "https://cdn.shopify.com/s/files/1/2209/1363/products/MF48QW_large.png?v=1535651144";
-        String wKing = "https://cdn.shopify.com/s/files/1/2209/1363/products/additional_megachess-44_33afb3f4-7bfe-4438-a46a-46b5d1b35078_1200x1200.png?v=1535649501";
+        String wRook = "https://github.com/hpa25168/Game-chess/blob/work_Board/rook.png?raw=true?raw=true";
+        Image wPawn = new Image("https://github.com/hpa25168/Game-chess/blob/work_Board/pawn.png?raw=true");
+        String wKnight = "https://github.com/hpa25168/Game-chess/blob/work_Board/knight.png?raw=true";
+        String wBishop = "https://github.com/hpa25168/Game-chess/blob/work_Board/rook.png?raw=true";
+        String wQueen = "https://github.com/hpa25168/Game-chess/blob/work_Board/GQueen.png?raw=true";
+        String wKing = "https://github.com/hpa25168/Game-chess/blob/work_Board/GKing.png?raw=true";
         whitechessObjects = new ImageView[][] {
                 {
                         new ImageView(wPawn),new ImageView(wPawn), new ImageView(wPawn),new ImageView(wPawn),new ImageView(wPawn),new ImageView(wPawn),new ImageView(wPawn),new ImageView(wPawn)
